@@ -20,3 +20,14 @@ D:\codex - WorkSpace\GitHub\Integradora\Github-Proyect\ThePlaning\obj\Debug\netc
 D:\codex - WorkSpace\GitHub\Integradora\Github-Proyect\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.AssemblyInfo.cs
 D:\codex - WorkSpace\GitHub\Integradora\Github-Proyect\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.dll
 D:\codex - WorkSpace\GitHub\Integradora\Github-Proyect\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.pdb
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\bin\Debug\netcoreapp1.1\ThePlaning.deps.json
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\bin\Debug\netcoreapp1.1\ThePlaning.runtimeconfig.json
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\bin\Debug\netcoreapp1.1\ThePlaning.runtimeconfig.dev.json
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\bin\Debug\netcoreapp1.1\ThePlaning.dll
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\bin\Debug\netcoreapp1.1\ThePlaning.pdb
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.dll
+C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\obj\Debug\netcoreapp1.1\ThePlaning.pdb
