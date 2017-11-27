@@ -1,2 +1,0 @@
-# Integradora
-Proyecto Integrador 
