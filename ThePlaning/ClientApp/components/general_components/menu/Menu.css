@@ -1,0 +1,52 @@
+﻿*{ margin: 0px;
+   padding: 0px
+  }
+
+/*body {
+    background-color: #cccbc8;
+}*/
+
+.Menu {
+    width: 100%;
+    background: white;
+    width: 200px;
+    color: white;
+    margin: 10px auto 0 auto 0;
+}
+
+.Menu li{
+    list-style-type: none;
+}
+
+.category h3{
+    font-size: 17px;
+    line-height: 50px;
+    padding: 0 10px;
+    margin: 0px;
+    background: black;
+    cursor: pointer;
+}
+
+i {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.category ul li p {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 27px;
+    display: block;
+    padding: 0 15px;
+    transition: all 0.25s;
+}
+
+
+.category ul li p:hover{
+    background: #737373;
+    border-left: 5px solid lightblue;
+    transition: all 0.55s;
+    color: white;
+}
+
