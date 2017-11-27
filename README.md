@@ -3,7 +3,7 @@ Proyecto Integrador
 
 Desarrolladores:
 -Santiago Arguello Ojedis
--Andres Morales
+-Andres Morales Carranza
 
 ==================
 Tecnologias a usar
