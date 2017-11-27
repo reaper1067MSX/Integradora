@@ -9,6 +9,10 @@ Desarrolladores:
 Tecnologias a usar
 ==================
 
+npm i react-select --save
+npm install react-day-picker --save
+npm i styled-components --save
+
 Gestor de packetes:
 -npm
 
