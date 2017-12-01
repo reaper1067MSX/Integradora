@@ -6,6 +6,12 @@
     <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="ClientApp\css\**" />
+    <Content Remove="ClientApp\css\**" />
+    <EmbeddedResource Remove="ClientApp\css\**" />
+    <None Remove="ClientApp\css\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="1.1.1" />
@@ -20,9 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\selects\select.tsx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClientApp\css\" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->

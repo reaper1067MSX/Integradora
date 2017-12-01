@@ -29,7 +29,9 @@ export class NavBar extends React.Component<{}, {}> {
                                         </NavLink>
                                     </li>                                     
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        <NavLink to={'/registroBeneficiario'} activeClassName='active'> 
+                                             <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                         </NavLink>
                                     </li>                
                                     <li>
                                         <span className="glyphicon glyphicon-chevron-right"></span>Disponibilidad del Beneficiario
@@ -50,7 +52,9 @@ export class NavBar extends React.Component<{}, {}> {
                                         <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                     </li>
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        <NavLink to={'/registroCoFacilitador'} activeClassName='active'> 
+                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        </NavLink>
                                     </li>
                                     <li>
                                         <span className="glyphicon glyphicon-chevron-right"></span>Asignar Club a Co-Facilitador
@@ -84,16 +88,15 @@ export class NavBar extends React.Component<{}, {}> {
                                     <a href="#">
                                         <i className='fa fa-podcast'></i>
                                         Punto Satelite
-                                        <span className='glyphicon glyphicon-chevron-down'></span>
-                                    </a>
+                                        <span className='glyphicon glyphicon-chevron-down'></span> 
+                                     </a>
                                 </li>
                                 <ul className="sub-menu collapse" id="new3">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>
-                                            Visualizar
+                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                     </li>
                                     <li>
-                                        <NavLink to={'/puntosatelite'} activeClassName='active'> 
+                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'> 
                                             <span className="glyphicon glyphicon-chevron-right"></span>Registrar
                                         </NavLink>
                                     </li>

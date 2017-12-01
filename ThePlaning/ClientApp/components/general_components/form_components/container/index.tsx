@@ -13,6 +13,7 @@ export const FormGroup = styled.div`
 export const Row = styled.div`
     margin-right: -15px;
     margin-left: -15px;
+    
 `;
 
 export const HeaderForm = styled.div`
@@ -28,9 +29,10 @@ export const CuerpoForm = styled.div`
     padding-bottom: 10px;
     padding-top: 20px;    
     padding-left: 10px;
-    padding-right: 10px;        
+    padding-right: 10px;
+    max-width: 991px;
 `;
-
+//max-width: 991px; para que se vea bien en cualquier resolucion
 export const TituloForm = styled.p`
     font-size: 24px;
     font-weight: 700;
