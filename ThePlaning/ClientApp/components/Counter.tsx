@@ -49,8 +49,6 @@ export class Counter extends React.Component<{}, State> {
                         <p>This is a simple calendar selector for a React component.</p>
 
                         <DayPicker value={this.state.fecha_caja} onDayChange={this.changeDate} />
-
-                        
                     </div>
                 </Row>
                 <Row>
