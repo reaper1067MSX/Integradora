@@ -1,7 +1,7 @@
 import * as React from 'react';
 import DayPicker from './general_components/form_components/daypicker/daypickerinput';
 import Selects from './general_components/form_components/selects/select';
-import { CuerpoForm, ContainerEdit, Row } from './general_components/form_components/contenedores'; 
+import { CuerpoForm, ContainerEdit, Row } from './general_components/form_components/container'; 
 
 interface State {
     currentCount: number;
@@ -72,6 +72,8 @@ export class Counter extends React.Component<{}, State> {
         const value = target.value;
         this.setState({ fecha_caja: value });
     }
+
+    
 
     //REaliza todas estas operaciones al renderizar el form
     componentDidMount() {

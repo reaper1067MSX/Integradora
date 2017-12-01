@@ -1,4 +1,4 @@
-import './css/site.css';
+import './components/general_components/form_components/layout/menu/menu.css';
 import 'bootstrap';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

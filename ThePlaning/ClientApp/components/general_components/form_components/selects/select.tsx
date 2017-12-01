@@ -20,7 +20,6 @@ export default class Selects extends React.Component<Props, {}> {
         return (
             <Select name={this.props.name} value={this.props.value} onChange={this.props.onChange} options={this.props.options}
             />
-            
         )
     }
 

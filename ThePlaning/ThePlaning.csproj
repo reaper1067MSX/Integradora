@@ -15,13 +15,14 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Files not to show in IDE -->
-    <None Remove="ClientApp\components\general_components\form_components\contenedores\index.tsx" />
     <None Remove="ClientApp\components\general_components\form_components\selects\select.tsx" />
     <None Remove="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\contenedores\index.tsx" />
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\selects\select.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientApp\css\" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->

@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
-import { Club } from './components/Club';
-import { PuntoSatelite } from './components/PuntoSatelite';
+import { Layout } from './components/general_components/form_components/layout/Layout';
+import { Home } from './components/Forms/Home/Home';
+import { registroClub } from './components/Forms/Club/registroClub';
+//import { Counter } from './components/Counter';
+//import { PuntoSatelite } from './components/PuntoSatelite';
 
 export const routes = <Layout>
     <Route exact path='/' component={ Home } />
-    <Route path='/counter' component={ Counter } />
-    <Route path='/fetchdata' component={FetchData} />
-    <Route path='/dart' component={Home} />
-    <Route path='/club' component={Club} />
-    <Route path='/puntosatelite' component={PuntoSatelite} />
+    <Route path='/registroClub' component={registroClub} />
 </Layout>;

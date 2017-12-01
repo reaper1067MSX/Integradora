@@ -7,8 +7,7 @@ import styled from 'styled-components';
 
 
 export const FormGroup = styled.div`
-    margin-bottom: 3px;
-   margin-top: 40px;
+   margin-bottom: 3px;
 `;
 
 export const Row = styled.div`
@@ -17,22 +16,25 @@ export const Row = styled.div`
 `;
 
 export const HeaderForm = styled.div`
-    height: 35px;
-    background-color: #eceff1;    
-    border-bottom: 1px solid #cfd8dc;
+    height: 35px;   
+    border-bottom: 3px solid #344868;
     padding: 0.75rem 1.25rem;
+    margin-top: 50px;
+    padding-bottom: 35px;
 `;
+//background - color: #901f61;    
 
 export const CuerpoForm = styled.div`
     padding-bottom: 10px;
-    padding-top: 0;    
+    padding-top: 20px;    
     padding-left: 10px;
     padding-right: 10px;        
 `;
 
 export const TituloForm = styled.p`
-    font-size: 12px;
+    font-size: 24px;
     font-weight: 700;
+    color: #901f61;
 `;
 
 export const ContainerEdit = styled.div`    
@@ -41,4 +43,14 @@ export const ContainerEdit = styled.div`
     padding: 10px;
     margin-bottom: 15px;
 `;
+
+
+export const Topbar = styled.div`
+    height: 35px;
+    background - color: #901f61; 
+    padding: 0.75rem 1.25rem;
+    padding - bottom: 35px;
+`;
+// margin - top: 50px;
+//border - bottom: 3px solid #344868;
 
