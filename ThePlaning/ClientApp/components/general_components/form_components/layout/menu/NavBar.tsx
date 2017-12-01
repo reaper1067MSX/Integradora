@@ -4,13 +4,13 @@ import { Link, NavLink } from 'react-router-dom';
 export class NavBar extends React.Component<{}, {}> {
     public render() {
         return  <div className="nav-side-menu">
-                   <div className="brand">The Planing</div>
+                   <div className="brand">The Circle</div>
                       <i className="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
                         <div className="menu-list">
                            <ul id="menu-content" className="menu-content collapse out">
                                 <li>
                                     <NavLink to={'/home'} activeClassName='active'> 
-                                        <i className='fa fa-podcast'></i>
+                                        <i className='fa fa-home'></i>
                                             Home
                                     </NavLink>
                                 </li>
@@ -62,7 +62,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </ul>
                                 <li data-toggle="collapse" data-target="#new2" className="collapsed">
                                     <a href="#">
-                                         <i className='fa fa-address-book-o'></i>
+                                        <i className='fa fa-futbol-o'></i>
                                             Club
                                         <span className='glyphicon glyphicon-chevron-down'></span>
                                     </a>
@@ -88,10 +88,29 @@ export class NavBar extends React.Component<{}, {}> {
                                     <a href="#">
                                         <i className='fa fa-podcast'></i>
                                         Punto Satelite
+                                        <span className='glyphicon glyphicon-chevron-down'></span>
+                                    </a>
+                                </li>
+                                <ul className="sub-menu collapse" id="new3">
+                                    <li>
+                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
+                                    </li>
+                                    <li>
+                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        </NavLink>
+                                    </li>
+                                </ul>
+
+
+                                <li data-toggle="collapse" data-target="#new4" className="collapsed">
+                                    <a href="#">
+                                       <i className='fa fa-book'></i>
+                                        Programa
                                         <span className='glyphicon glyphicon-chevron-down'></span> 
                                      </a>
                                 </li>
-                                <ul className="sub-menu collapse" id="new3">
+                                <ul className="sub-menu collapse" id="new4">
                                     <li>
                                         <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                     </li>
@@ -101,8 +120,46 @@ export class NavBar extends React.Component<{}, {}> {
                                         </NavLink>
                                     </li>
                                 </ul>
-                           </ul>
-                      </div>
+
+                                <li data-toggle="collapse" data-target="#new5" className="collapsed">
+                                    <a href="#">
+                                     <i className='fa fa-bullseye'></i>
+                                        Objetivo Estrategico
+                                        <span className='glyphicon glyphicon-chevron-down'></span>
+                                    </a>
+                                </li>
+                                <ul className="sub-menu collapse" id="new5">
+                                    <li>
+                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
+                                    </li>
+                                    <li>
+                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        </NavLink>
+                                    </li>
+                                </ul>
+
+
+                                <li data-toggle="collapse" data-target="#new6" className="collapsed">
+                                    <a href="#">
+                                        <i className='fa fa-university'></i>
+                                        Localidad
+                                        <span className='glyphicon glyphicon-chevron-down'></span>
+                                    </a>
+                                </li>
+                                <ul className="sub-menu collapse" id="new6">
+                                    <li>
+                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
+                                    </li>
+                                    <li>
+                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                        </NavLink>
+                                    </li>
+                                </ul>
+
+                           </ul>       
+                        </div>
                 </div>;
     }
 }

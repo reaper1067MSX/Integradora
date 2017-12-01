@@ -63,6 +63,7 @@ export class registroPuntoSatelite extends React.Component<{}, State> {
                         <Selects name="tipo" value={this.state.tipo} onChange={(value) => { this.setState({ estado: value }) }} options={this.state.options_users} />  
                     </Container>
                 </Row>
+
                 <Row>
                     <Container className='col-md-8' >
                         <Label>Responsable:</Label>
@@ -157,3 +158,4 @@ const InputText = styled.input`
 const Container = styled.div`
       margin-bottom: 6px;
     `;
+
