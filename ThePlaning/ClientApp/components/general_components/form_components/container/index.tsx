@@ -22,7 +22,6 @@ export const HeaderForm = styled.div`
     padding: 0.75rem 1.25rem;
     margin-top: 50px;
     padding-bottom: 35px;
-max-width: 910px;
 `;
 //background - color: #901f61;    
 
@@ -31,9 +30,11 @@ export const CuerpoForm = styled.div`
     padding-top: 20px;    
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 910px;
+    margin-right: 10%;
+    margin-left: 5%;
 `;
 //max-width: 991px; para que se vea bien en cualquier resolucion
+
 export const TituloForm = styled.p`
     font-size: 24px;
     font-weight: 700;
