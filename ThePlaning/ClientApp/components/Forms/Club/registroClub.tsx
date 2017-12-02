@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components'; //STYLES
 
-import DayPicker from '../../general_components/form_components/daypicker/daypickerinput';
+
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
 
@@ -54,7 +54,7 @@ export class registroClub extends React.Component<{} , State> {
                     </Container>
                     <Container className='col-md-6'>
                         <Label>Fecha de creacion:</Label>
-                        <DayPicker value={this.state.fecha_creacion} onDayChange={this.ChangeDateCreacion} />
+
                     </Container>                    
                 </Row>
                 <Row>
@@ -64,7 +64,7 @@ export class registroClub extends React.Component<{} , State> {
                     </Container>
                     <Container className='col-md-6'>
                         <Label>Fecha vigencia:</Label>
-                        <DayPicker value={this.state.fecha_vigencia} onDayChange={this.ChangeDateVigencia}  />                        
+                               
                     </Container>
                 </Row>
                 <Row>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DayPicker from './general_components/form_components/daypicker/daypickerinput';
+
 import Selects from './general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row } from './general_components/form_components/container'; 
 
@@ -48,7 +48,7 @@ export class Counter extends React.Component<{}, State> {
 
                         <p>This is a simple calendar selector for a React component.</p>
 
-                        <DayPicker value={this.state.fecha_caja} onDayChange={this.changeDate} />
+                        {/*<DayPicker value={this.state.fecha_caja} onDayChange={this.changeDate} />*/}
                     </div>
                 </Row>
                 <Row>
