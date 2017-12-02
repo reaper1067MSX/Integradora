@@ -65,11 +65,11 @@
             vertical-align: middle;
             float: right;
         }
-
+        /*colo al activar el menu*/
         .nav-side-menu ul .active,
         .nav-side-menu li .active {
-            border-left: 3px solid #344868;
-            background-color: #344868;
+            /*border-left: 5px solid #344868;*/
+            background-color: transparent;
             color: #ffffff;
         }
 
@@ -94,7 +94,9 @@
             /*Efecto del sub menu*/
             .nav-side-menu ul .sub-menu li:hover,
             .nav-side-menu li .sub-menu li:hover {
-                background-color: #344868;
+                border-left: 10px solid #71A0A5;
+                background-color: #901f61;
+                
             }
 
         .nav-side-menu ul .sub-menu span:before {
