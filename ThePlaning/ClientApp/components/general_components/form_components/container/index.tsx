@@ -30,8 +30,9 @@ export const CuerpoForm = styled.div`
     padding-top: 20px;    
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 10%;
-    margin-left: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 100 %;
 `;
 //max-width: 991px; para que se vea bien en cualquier resolucion
 
@@ -57,4 +58,3 @@ export const Topbar = styled.div`
 `;
 // margin - top: 50px;
 //border - bottom: 3px solid #344868;
-
