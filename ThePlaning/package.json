@@ -29,7 +29,8 @@
     "webpack-hot-middleware": "2.18.0"
   },
   "dependencies": {
-    "react-bootstrap-date-picker": "^5.1.0",
+    "moment": "^2.19.3",
+    "react-datepicker": "^0.61.0",
     "react-select": "^1.0.1",
     "styled-components": "^2.2.3"
   }

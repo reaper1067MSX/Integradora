@@ -21,10 +21,12 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Files not to show in IDE -->
+    <None Remove="ClientApp\components\general_components\form_components\date-picker\date-piker.tsx" />
     <None Remove="ClientApp\components\general_components\form_components\selects\select.tsx" />
     <None Remove="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\date-picker\date-piker.tsx" />
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\selects\select.tsx" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
