@@ -18,7 +18,7 @@ export default class DayPicker extends React.Component<Props, {}> {
 
     render() {
         return (
-            <DatePicker id={this.props.id} selected={this.props.selected} onChange={this.props.onChange} />
+            <DatePicker id={this.props.id} selected={this.props.selected} onChange={this.props.onChange} dateFormat="DD/MM/YYYY"/>
         )
     }
 } 
