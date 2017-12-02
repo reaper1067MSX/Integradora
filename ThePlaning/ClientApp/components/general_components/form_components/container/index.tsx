@@ -32,7 +32,7 @@ export const CuerpoForm = styled.div`
     padding-right: 10px;
     margin-right: 2%;
     margin-left: 2%;
-    width: 100 %;
+    width: 80 %;
 `;
 //max-width: 991px; para que se vea bien en cualquier resolucion
 
