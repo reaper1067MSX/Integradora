@@ -22,15 +22,10 @@ export class NavBar extends React.Component<{}, {}> {
                                         <span className='glyphicon glyphicon-chevron-down'></span>      
                                     </a>
                                 </li>
-                                <ul className="sub-menu collapse" id="new">
-                                    <li>
-                                        <NavLink to={'/home'} activeClassName='active'> 
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                        </NavLink>
-                                    </li>                                     
+                                <ul className="sub-menu collapse" id="new">                                    
                                     <li>
                                         <NavLink to={'/registroBeneficiario'} activeClassName='active'> 
-                                             <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                          </NavLink>
                                     </li>                
                                     <li>
@@ -49,11 +44,8 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new1">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                    </li>
-                                    <li>
                                         <NavLink to={'/registroCoFacilitador'} activeClassName='active'> 
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
                                     <li>
@@ -68,15 +60,10 @@ export class NavBar extends React.Component<{}, {}> {
                                     </a>
                                 </li>
                                 <ul className="sub-menu collapse" id="new2">
-                                <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>
-                                        Visualizar
-                                
-                                    </li>
                                  <li>
                             <NavLink to={'/registroClub'} activeClassName='active'> 
                                         <span className="glyphicon glyphicon-chevron-right"></span>
-                                        Registrar
+                                        Visualizar
                                 </NavLink>
                                     </li>
                                     <li>
@@ -93,11 +80,8 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new3">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                    </li>
-                                    <li>
                                         <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                            <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -112,11 +96,8 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new4">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                    </li>
-                                    <li>
                                         <NavLink to={'/registroPuntoSatelite'} activeClassName='active'> 
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -130,11 +111,8 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new5">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                    </li>
-                                    <li>
                                         <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -149,11 +127,8 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new6">
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                    </li>
-                                    <li>
                                         <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Registrar
+                                <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
                                 </ul>
