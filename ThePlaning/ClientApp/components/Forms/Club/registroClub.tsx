@@ -7,6 +7,12 @@ import * as moment from 'moment';
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
 
+//GRID
+import SimpleGridExample from '../../general_components/form_components/grid/ag_grid_render';
+
+//Modal
+//import Modal from '../../general_components/form_components/modal/modal';
+
 
 interface State {
     codigo: any;
@@ -17,8 +23,24 @@ interface State {
     programa: any;
     estado: any;
     options_users: Array<any>;
+    isShowingModal: any;
 
 }
+
+export const ContenedorForm = styled.div`    
+    position: absolute;
+    width: 100%;
+    border: 1px solid #cfd8dc;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;    
+    padding-bottom: 10px;
+    @media (max-width: 767px) {	    
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 98%;
+    }
+`;
 
 export class registroClub extends React.Component<{} , State> {
     constructor() { //Permite pasar valores al componente
@@ -32,6 +54,8 @@ export class registroClub extends React.Component<{} , State> {
             programa: "",
             estado: "",
             options_users: [],
+
+            isShowingModal: false,
             
 
         };
@@ -40,6 +64,7 @@ export class registroClub extends React.Component<{} , State> {
         this.changeValues = this.changeValues.bind(this);
         this.ChangeDateCreacion = this.ChangeDateCreacion.bind(this);
         this.ChangeDateVigencia = this.ChangeDateVigencia.bind(this);
+        this.showModal = this.showModal.bind(this);
     }
 
     public render() {
@@ -93,7 +118,7 @@ export class registroClub extends React.Component<{} , State> {
                 <Row>
                     <Container className='col-md-12'>
                         <div className="btn-group pull-right">
-                            <button type="submit" className='btn btn-secondary btn-sm'>
+                            <button type="submit" className='btn btn-secondary btn-sm' onChange={this.showModal}>
                                 <i className="fa fa-trash-o fa-lg"></i> Limpiar
                             </button>
                         </div>
@@ -104,11 +129,24 @@ export class registroClub extends React.Component<{} , State> {
                         </div>                        
                     </Container>
                 </Row>
+                <Row>
+                    <Container className='col-md-12'>
+                        <SimpleGridExample />
+               
+                    </Container>
+                </Row>
             </CuerpoForm>
+
+            
+
         </div>;
     }
 
+    //Functions modal
 
+    showModal() {
+        this.setState({ isShowingModal: !this.state.isShowingModal })
+    }
     
 
     //Functions
