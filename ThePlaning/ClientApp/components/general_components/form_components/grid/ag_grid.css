@@ -69,6 +69,7 @@ ag-grid-aurelia {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
+ 
 }
 .ag-layout-normal .ag-header {
   position: absolute;

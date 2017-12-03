@@ -22,9 +22,10 @@
   -ms-transition: background-color 1s;
   transition: background-color 1s;
 }
-.ag-silver .ag-cell-not-inline-editing {
-  padding: 2px;
-}
+    .ag-silver .ag-cell-not-inline-editing {
+        padding: 2px;
+        border-bottom: 1px solid #ddd
+    }
 .ag-silver .ag-cell-range-selected-1:not(.ag-cell-focus) {
   background-color: rgba(120,120,120,0.4);
 }
@@ -37,23 +38,26 @@
 .ag-silver .ag-cell-range-selected-4:not(.ag-cell-focus) {
   background-color: rgba(0,0,0,0.4);
 }
-.ag-silver .ag-cell-focus {
-  border: 2px solid cornflowerblue;
-}
-.ag-silver .ag-cell-no-focus {
-  border-top: 2px solid transparent;
-  border-bottom: 1px dotted #acaeaf;
-}
-.ag-silver .ag-ltr .ag-cell-no-focus {
-  border-right: 1px dotted #acaeaf;
-  border-left: 2px solid transparent;
-}
+    /*.ag-silver .ag-cell-focus {
+        border-bottom: 1px dotted #acaeaf;
+        border-right: 1px solid #acaeaf;
+    }*/
+    /*.ag-silver .ag-cell-no-focus {
+        border-bottom: 1px dotted #acaeaf;
+        
+    }*/
+/*
+    .ag-silver .ag-ltr .ag-cell-no-focus {
+        border-right: 0px dotted #acaeaf;
+        border-left: 2px solid transparent;
+    }
 .ag-silver .ag-rtl .ag-cell-no-focus {
   border-right: 2px solid transparent;
   border-left: 1px dotted #acaeaf;
 }
+
 .ag-silver .ag-rtl .ag-cell-first-right-pinned {
-  border-left: 1px solid #acaeaf;
+    border-left: 1px solid #acaeaf;
 }
 .ag-silver .ag-ltr .ag-cell-first-right-pinned {
   border-left: 1px solid #acaeaf;
@@ -63,7 +67,7 @@
 }
 .ag-silver .ag-ltr .ag-cell-last-left-pinned {
   border-right: 1px solid #acaeaf;
-}
+}*/
 .ag-silver .ag-cell-highlight {
   border: 1px solid #006400;
 }
@@ -122,21 +126,23 @@
 .ag-silver .ag-large-text {
   border: 1px solid #acaeaf;
 }
+    /*
 .ag-silver .ag-header-select-all {
   padding: 5px 0px 0px 3px;
   line-height: 0;
-}
-.ag-silver .ag-header {
-  color: black;
-  background: #eceff1;
-  border-bottom: 1px solid #acaeaf;
-  font-weight: 600;
-}
+}*/
+    .ag-silver .ag-header {
+        color: #fff;
+        background: #901f61;
+        border-bottom: 1px solid #acaeaf;
+        font-weight: 600;
+    }
 .ag-silver .ag-header-icon {
   color: black;
   stroke: none;
   fill: black;
 }
+/*
 .ag-silver .ag-layout-for-print .ag-header-container {
   background: #5b9bd5;
   border-bottom: 1px solid #acaeaf;
@@ -146,7 +152,7 @@
 }
 .ag-silver .ag-rtl .ag-header-cell {
   border-left: 1px solid #acaeaf;
-}
+}*/
 .ag-silver .ag-header-cell-moving .ag-header-cell-label {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
