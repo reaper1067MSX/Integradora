@@ -63,7 +63,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new2">
                                     <li>
-                                        <NavLink to={'/registroClub'} activeClassName='active'> 
+                                        <NavLink to={'/visualizarClub'} activeClassName='active'> 
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components'; //STYLES
-
+import DayPicker from '../../general_components/form_components/date-picker/date-piker';
+import * as moment from 'moment';
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
 
@@ -10,7 +11,7 @@ interface State {
     nombres: any;
     apellidos: any;
     club: any;
-    fechaNacimiento: any;
+    fecha_nacimiento: moment.Moment;
     observaciones: any;
     estado: any;
     options_users: Array<any>;
@@ -26,7 +27,7 @@ export class registroCoFacilitador extends React.Component<{} , State> {
             nombres: "",
             apellidos:"",
             club: "",
-            fechaNacimiento: "",
+            fecha_nacimiento: moment(),
             estado: "",
             observaciones: "",
             options_users: [],
@@ -36,6 +37,7 @@ export class registroCoFacilitador extends React.Component<{} , State> {
 
         //Funciones binds
         this.changeValues = this.changeValues.bind(this);
+        this.ChangeDateNacimiento = this.ChangeDateNacimiento.bind(this);
 
     }
 
@@ -60,7 +62,7 @@ export class registroCoFacilitador extends React.Component<{} , State> {
                 <Row>
                     <Container className='col-md-4' >
                         <Label>Fecha Nacimiento:</Label>
-                        <InputText name='fechaNacimiento' value={this.state.fechaNacimiento} type="number" className='form-control input-sm' placeholder='Fecha Nacimiento' onChange={this.changeValues} />
+                        <DayPicker id="fecha_nacimiento" selected={this.state.fecha_nacimiento} onChange={this.ChangeDateNacimiento} />
                     </Container>
                 </Row>
                 <Row>
@@ -106,6 +108,14 @@ export class registroCoFacilitador extends React.Component<{} , State> {
 
     //Functions
 
+    ChangeDateNacimiento(day) {
+        //SAVE
+        this.setState({ fecha_nacimiento: day });
+
+        //LEERLO
+        //moment.locale('es');
+        //alert(moment(this.state.fecha_creacion).format('L'));
+    }
 
     changeValues(event) {
 

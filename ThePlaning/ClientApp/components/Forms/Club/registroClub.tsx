@@ -50,7 +50,7 @@ export class registroClub extends React.Component<{} , State> {
             </HeaderForm>
             <CuerpoForm>
                 <Row>
-                    <Container className='col-md-6'>
+                    <Container className='col-md-6' >
                         <Label>Codigo:</Label>
                         <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
                     </Container>
@@ -66,17 +66,17 @@ export class registroClub extends React.Component<{} , State> {
                     </Container>
                     <Container className='col-md-6'>
                         <Label>Fecha vigencia:</Label>
-                        <DayPicker id="fecha_vigencia" selected={this.state.fecha_vigencia} onChange={this.ChangeDateVigencia} />   
+                        <DayPicker  id="fecha_vigencia" selected={this.state.fecha_vigencia} onChange={this.ChangeDateVigencia} />   
                     </Container>
                 </Row>
                 <Row>
                     <Container className='col-md-6'>
-                        <Label>Punto satelite:</Label>
-                        <Selects name="punto_satelite" value={this.state.punto_satelite} onChange={(value) => { this.setState({ punto_satelite: value }) }} options={this.state.options_users} />
+                        <Label>Programa:</Label>
+                        <Selects name="programa" value={this.state.programa} onChange={(value) => { this.setState({ programa: value }) }} options={this.state.options_users} />
                     </Container>
                     <Container className='col-md-6'>
-                        <Label>Programa:</Label>
-                        <Selects name="programa" value={this.state.programa} onChange={ (value) => { this.setState({ programa: value })} } options={this.state.options_users} />
+                        <Label>Punto satelite:</Label>
+                        <Selects name="punto_satelite" value={this.state.punto_satelite} onChange={(value) => { this.setState({ punto_satelite: value }) }} options={this.state.options_users} />
                     </Container>
                 </Row>
                 <Row>

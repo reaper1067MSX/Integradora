@@ -22,6 +22,7 @@ export const HeaderForm = styled.div`
     padding: 0.75rem 1.25rem;
     margin-top: 50px;
     padding-bottom: 35px;
+    width:80%;
 `;
 //background - color: #901f61;    
 
@@ -30,9 +31,9 @@ export const CuerpoForm = styled.div`
     padding-top: 20px;    
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 80 %;
+
+    margin-left: 1%;
+    width: 80%;
 `;
 //max-width: 991px; para que se vea bien en cualquier resolucion
 
@@ -47,6 +48,7 @@ export const ContainerEdit = styled.div`
     height: 70px;  
     padding: 10px;
     margin-bottom: 15px;
+
 `;
 
 
