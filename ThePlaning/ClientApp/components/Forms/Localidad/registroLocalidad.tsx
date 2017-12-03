@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components'; //STYLES
 
+import DayPicker from '../../general_components/form_components/date-picker/date-piker';
+import * as moment from 'moment';
+
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
 
@@ -8,8 +11,8 @@ import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '
 interface State {
     codigo: any;
     nombre: any;
-    fecha_creacion: any;
-    fecha_vigencia: any;
+    fecha_creacion: moment.Moment;
+    fecha_vigencia: moment.Moment;
     punto_satelite: any;
     programa: any;
     estado: any;
@@ -17,14 +20,14 @@ interface State {
 
 }
 
-export class registroBeneficiario extends React.Component<{} , State> {
+export class registroLocalidad extends React.Component<{} , State> {
     constructor() { //Permite pasar valores al componente
         super();
         this.state = {
             codigo: "",
             nombre: "",
-            fecha_creacion: "",
-            fecha_vigencia: "",
+            fecha_creacion: moment(),
+            fecha_vigencia: moment(),
             punto_satelite: "",
             programa: "",
             estado: "",
@@ -43,17 +46,17 @@ export class registroBeneficiario extends React.Component<{} , State> {
         const { fecha_vigencia } = this.state;
         return <div className="container">
             <HeaderForm>
-                <TituloForm>Registro Beneficiario</TituloForm>
+                <TituloForm>Registro Localidad</TituloForm>
             </HeaderForm>
             <CuerpoForm>
                 <Row>
-                    <Container className='col-md-6'>
+                    <Container className='col-md-6' >
                         <Label>Codigo:</Label>
                         <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
                     </Container>
                     <Container className='col-md-6'>
                         <Label>Fecha de creacion:</Label>
-                       
+                        <DayPicker id="fecha_creacion" selected={this.state.fecha_creacion} onChange={this.ChangeDateCreacion} />
                     </Container>                    
                 </Row>
                 <Row>
@@ -63,17 +66,17 @@ export class registroBeneficiario extends React.Component<{} , State> {
                     </Container>
                     <Container className='col-md-6'>
                         <Label>Fecha vigencia:</Label>
-                                     
+                        <DayPicker  id="fecha_vigencia" selected={this.state.fecha_vigencia} onChange={this.ChangeDateVigencia} />   
                     </Container>
                 </Row>
                 <Row>
                     <Container className='col-md-6'>
-                        <Label>Punto satelite:</Label>
-                        <Selects name="punto_satelite" value={this.state.punto_satelite} onChange={(value) => { this.setState({ punto_satelite: value }) }} options={this.state.options_users} />
+                        <Label>Programa:</Label>
+                        <Selects name="programa" value={this.state.programa} onChange={(value) => { this.setState({ programa: value }) }} options={this.state.options_users} />
                     </Container>
                     <Container className='col-md-6'>
-                        <Label>Programa:</Label>
-                        <Selects name="programa" value={this.state.programa} onChange={ (value) => { this.setState({ programa: value })} } options={this.state.options_users} />
+                        <Label>Punto satelite:</Label>
+                        <Selects name="punto_satelite" value={this.state.punto_satelite} onChange={(value) => { this.setState({ punto_satelite: value }) }} options={this.state.options_users} />
                     </Container>
                 </Row>
                 <Row>
@@ -111,12 +114,17 @@ export class registroBeneficiario extends React.Component<{} , State> {
     //Functions
 
     ChangeDateCreacion(day) {
+        //SAVE
         this.setState({ fecha_creacion: day });
+
+        //LEERLO
+        //moment.locale('es');
+        //alert(moment(this.state.fecha_creacion).format('L'));
     }
 
-    ChangeDateVigencia(day) {
-        this.setState({ fecha_vigencia: day });
-        console.log("Fecha guardada: ", this.state.fecha_vigencia.getDayPicker())
+    ChangeDateVigencia(event) {
+        console.log(event);
+        this.setState({ fecha_vigencia: event });
     }
     
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+ import * as React from 'react';
 import styled from 'styled-components'; //STYLES
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
@@ -14,7 +14,7 @@ interface State {
 
 }
 
-export class visualizarClub extends React.Component<{} , State> {
+export class visualizarBeneficiario extends React.Component<{} , State> {
     constructor() { //Permite pasar valores al componente
         super();
         this.state = {
@@ -37,7 +37,7 @@ export class visualizarClub extends React.Component<{} , State> {
 
         return <div className="container">
             <HeaderForm>
-                <TituloForm>Visualizar Clubs</TituloForm>
+                <TituloForm>Visualizar Beneficiarios</TituloForm>
             </HeaderForm>
             <CuerpoForm>
                 <Row>
@@ -46,7 +46,7 @@ export class visualizarClub extends React.Component<{} , State> {
                         <InputText name='buscar' value={this.state.buscar} type="number" className='form-control input-sm' placeholder='buscar' onChange={this.changeValues} />
                     </Container>  
                     <Container className='col-md-6'>
-                        <NavLink to={'/registroClub'} activeClassName='active'> 
+                        <NavLink to={'/registroBeneficiario'} activeClassName='active'> 
                             <div className="btn-group pull-right">
                                 <Label></Label>
                                 <button type="submit" className='btn btn-primary btn-sm'>

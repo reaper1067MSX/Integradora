@@ -4,7 +4,7 @@ import { CuerpoForm, ContainerEdit, Row, FormGroup } from '../../general_compone
 
 export class Home extends React.Component<{}, {}> {
     public render() {
-        return <FormGroup>
+        return <FormGroup className="fondo">
             
         </FormGroup>;
     }

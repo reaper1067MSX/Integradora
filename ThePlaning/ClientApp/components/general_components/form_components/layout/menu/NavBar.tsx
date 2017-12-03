@@ -24,7 +24,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new">                                    
                                     <li>
-                                         <NavLink to={'/registroBeneficiario'} activeClassName='active'> 
+                                         <NavLink to={'/visualizarBeneficiario'} activeClassName='active'> 
                                              <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                          </NavLink>
                                     </li>                
@@ -45,7 +45,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new1">
                                     <li>
-                                        <NavLink to={'/registroCoFacilitador'} activeClassName='active'> 
+                                        <NavLink to={'/visualizarCoFacilitador'} activeClassName='active'> 
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
@@ -81,7 +81,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new3">
                                     <li>
-                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                        <NavLink to={'/visualizarPuntoSatelite'} activeClassName='active'>
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
@@ -96,7 +96,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new4">
                                     <li>
-                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'> 
+                                        <NavLink to={'/visualizarPrograma'} activeClassName='active'> 
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
@@ -110,7 +110,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new5">
                                     <li>
-                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                        <NavLink to={'/visualizarObjetivoEstrategico'} activeClassName='active'>
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
@@ -126,7 +126,7 @@ export class NavBar extends React.Component<{}, {}> {
                                 </li>
                                 <ul className="sub-menu collapse" id="new6">
                                     <li>
-                                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'>
+                                         <NavLink to={'/visualizarLocalidad'} activeClassName='active'>
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>

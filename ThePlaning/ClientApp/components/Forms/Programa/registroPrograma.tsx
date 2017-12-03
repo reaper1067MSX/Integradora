@@ -1,33 +1,35 @@
 import * as React from 'react';
 import styled from 'styled-components'; //STYLES
-
+import DayPicker from '../../general_components/form_components/date-picker/date-piker';
+import * as moment from 'moment';
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
 
 
 interface State {
     codigo: any;
-    nombre: any;
-    fecha_creacion: any;
-    fecha_vigencia: any;
-    punto_satelite: any;
-    programa: any;
+    nombres: any;
+    apellidos: any;
+    club: any;
+    fecha_nacimiento: moment.Moment;
+    observaciones: any;
     estado: any;
     options_users: Array<any>;
 
+
 }
 
-export class registroBeneficiario extends React.Component<{} , State> {
+export class registroPrograma extends React.Component<{} , State> {
     constructor() { //Permite pasar valores al componente
         super();
         this.state = {
             codigo: "",
-            nombre: "",
-            fecha_creacion: "",
-            fecha_vigencia: "",
-            punto_satelite: "",
-            programa: "",
+            nombres: "",
+            apellidos:"",
+            club: "",
+            fecha_nacimiento: moment(),
             estado: "",
+            observaciones: "",
             options_users: [],
             
 
@@ -35,58 +37,54 @@ export class registroBeneficiario extends React.Component<{} , State> {
 
         //Funciones binds
         this.changeValues = this.changeValues.bind(this);
-        this.ChangeDateCreacion = this.ChangeDateCreacion.bind(this);
-        this.ChangeDateVigencia = this.ChangeDateVigencia.bind(this);
+        this.ChangeDateNacimiento = this.ChangeDateNacimiento.bind(this);
+
     }
 
     public render() {
-        const { fecha_vigencia } = this.state;
         return <div className="container">
             <HeaderForm>
-                <TituloForm>Registro Beneficiario</TituloForm>
+                <TituloForm>Registro Programa</TituloForm>
             </HeaderForm>
             <CuerpoForm>
                 <Row>
-                    <Container className='col-md-6'>
-                        <Label>Codigo:</Label>
-                        <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
-                    </Container>
-                    <Container className='col-md-6'>
-                        <Label>Fecha de creacion:</Label>
-                       
+                    <Container className='col-md-6' offset-md-6>
+                        <Label>Codigo Apadrinado:</Label>
+                        <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Codigo' onChange={this.changeValues} />
                     </Container>                    
                 </Row>
                 <Row>
-                    <Container className='col-md-6'>
-                        <Label>Nombre:</Label>
-                        <InputText name='nombre' value={this.state.nombre} type="text" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
-                    </Container>
-                    <Container className='col-md-6'>
-                        <Label>Fecha vigencia:</Label>
-                                     
+                    <Container className='col-md-8' >
+                        <Label>Nombres:</Label>
+                        <InputText name='nombres' value={this.state.nombres} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
                     </Container>
                 </Row>
                 <Row>
-                    <Container className='col-md-6'>
-                        <Label>Punto satelite:</Label>
-                        <Selects name="punto_satelite" value={this.state.punto_satelite} onChange={(value) => { this.setState({ punto_satelite: value }) }} options={this.state.options_users} />
-                    </Container>
-                    <Container className='col-md-6'>
-                        <Label>Programa:</Label>
-                        <Selects name="programa" value={this.state.programa} onChange={ (value) => { this.setState({ programa: value })} } options={this.state.options_users} />
+                    <Container className='col-md-4' >
+                        <Label>Fecha Nacimiento:</Label>
+                        <DayPicker id="fecha_nacimiento" selected={this.state.fecha_nacimiento} onChange={this.ChangeDateNacimiento} />
                     </Container>
                 </Row>
                 <Row>
-                    <Container className='col-md-6 offset-md-6'>
-                        <Label>Estado:</Label>
-                        <Selects name="estado" value={this.state.estado} onChange={(value) => { this.setState({ estado: value }) }} options={this.state.options_users} />
-                    </Container>                   
-                </Row>                
+                    <Container className='col-md-8' >
+                        <Label>Apellidos:</Label>
+                        <InputText name='apellidos' value={this.state.apellidos} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
+                    </Container>
+                </Row>
                 <Row>
-                    <Container className='col-md-12'>
+                    <Container className='col-md-4' >
+                        <Label>Club:</Label>
+                        <Selects name="club" value={this.state.club} onChange={(value) => { this.setState({ estado: value }) }} options={this.state.options_users} />
+                    </Container>
+                </Row>
+                <Row>
+                    <Container className='col-md-12' >
+                        <Label>Observaciones:</Label>
                         <br/>
+                        <textarea name='observaciones' placeholder='Observaciones'/>   
                     </Container>
                 </Row>
+
                 <Row>
                     <Container className='col-md-12'>
                         <div className="btn-group pull-right">
@@ -110,15 +108,14 @@ export class registroBeneficiario extends React.Component<{} , State> {
 
     //Functions
 
-    ChangeDateCreacion(day) {
-        this.setState({ fecha_creacion: day });
-    }
+    ChangeDateNacimiento(day) {
+        //SAVE
+        this.setState({ fecha_nacimiento: day });
 
-    ChangeDateVigencia(day) {
-        this.setState({ fecha_vigencia: day });
-        console.log("Fecha guardada: ", this.state.fecha_vigencia.getDayPicker())
+        //LEERLO
+        //moment.locale('es');
+        //alert(moment(this.state.fecha_creacion).format('L'));
     }
-    
 
     changeValues(event) {
 

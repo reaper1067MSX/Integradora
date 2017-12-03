@@ -14,7 +14,7 @@ interface State {
 
 }
 
-export class visualizarClub extends React.Component<{} , State> {
+export class visualizarPuntoSatelite extends React.Component<{} , State> {
     constructor() { //Permite pasar valores al componente
         super();
         this.state = {
@@ -37,7 +37,7 @@ export class visualizarClub extends React.Component<{} , State> {
 
         return <div className="container">
             <HeaderForm>
-                <TituloForm>Visualizar Clubs</TituloForm>
+                <TituloForm>Visualizar Puntos Satelites</TituloForm>
             </HeaderForm>
             <CuerpoForm>
                 <Row>
@@ -46,7 +46,7 @@ export class visualizarClub extends React.Component<{} , State> {
                         <InputText name='buscar' value={this.state.buscar} type="number" className='form-control input-sm' placeholder='buscar' onChange={this.changeValues} />
                     </Container>  
                     <Container className='col-md-6'>
-                        <NavLink to={'/registroClub'} activeClassName='active'> 
+                        <NavLink to={'/registroPuntoSatelite'} activeClassName='active'> 
                             <div className="btn-group pull-right">
                                 <Label></Label>
                                 <button type="submit" className='btn btn-primary btn-sm'>
@@ -65,7 +65,7 @@ export class visualizarClub extends React.Component<{} , State> {
                                     <th className="text-center">Programa</th>
                                     <th className="text-center">Punto Satelite</th>
                                     <th className="text-center">Horario</th>
-                                    <th className="text-center"><em className="fa fa-cog"></em></th>
+                                    <th className="text-center">Option</th>
                                     
                                 </tr>
                             </thead>
