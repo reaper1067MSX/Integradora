@@ -5,6 +5,36 @@
 
 import styled from 'styled-components';
 
+    //Contenedor Filas
+//=========================================
+export const Container = styled.div`
+    margin-bottom: 6px;
+`;
+//=========================================
+
+
+    //Modals Theme
+//=========================================
+
+export const HeaderModal = styled.div`
+    height: 35px;   
+    border-bottom: 3px solid #344868;
+    padding: 0.75rem 1.25rem;
+    padding-bottom: 35px;
+    width:100%;
+`;
+
+export const CuerpoModal = styled.div`
+    padding-bottom: 10px;
+    padding-top: 20px;    
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 1%;
+    width: 100%;
+`;
+
+//=========================================
+
 
 export const FormGroup = styled.div`
    margin-bottom: 3px;
@@ -31,7 +61,6 @@ export const CuerpoForm = styled.div`
     padding-top: 20px;    
     padding-left: 10px;
     padding-right: 10px;
-
     margin-left: 1%;
     width: 80%;
 `;

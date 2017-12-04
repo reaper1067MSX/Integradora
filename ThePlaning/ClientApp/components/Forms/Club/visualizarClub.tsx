@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components'; //STYLES
 import Selects from '../../general_components/form_components/selects/select';
-import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
+import { CuerpoForm, ContainerEdit, Row, HeaderForm, Container, TituloForm, Topbar } from '../../general_components/form_components/container';
+import { Label, InputText } from '../../general_components/form_components/controles';
 import { Link, NavLink } from 'react-router-dom';
 
 interface State {
@@ -114,12 +115,7 @@ export class visualizarClub extends React.Component<{} , State> {
         </div>;
     }
 
-
-    
-
     //Functions
-
-
     changeValues(event) {
 
         console.log("evento: ", event)
@@ -143,26 +139,6 @@ export class visualizarClub extends React.Component<{} , State> {
 
 }//End
 
-    //Style Components
-    const Label = styled.label` //LABEL STYLE
-      display: inline-block;  
-      font-size: 12px;
-    `;
+    
 
-    const InputText = styled.input`
-      height: 25px;
-      padding: 5px 10px;
-      font-size: 11px;
-      line-height: 1.5;
-      border-radius: 3px;
-      display: block;
-      width: 100%;
-      color: #555;
-      background-color: #fff;
-      background-image: none;
-      border: 1px solid #ccc;
-    `;
-
-    const Container = styled.div`
-      margin-bottom: 6px;
-    `;
+    

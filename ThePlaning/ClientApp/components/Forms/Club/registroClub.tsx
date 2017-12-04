@@ -5,15 +5,18 @@ import DayPicker from '../../general_components/form_components/date-picker/date
 import * as moment from 'moment';
 
 import Selects from '../../general_components/form_components/selects/select';
-import { CuerpoForm, ContainerEdit, Row, HeaderForm, TituloForm, Topbar } from '../../general_components/form_components/container'; 
+import { CuerpoForm, ContainerEdit, Row, HeaderForm, Container, TituloForm, Topbar, HeaderModal, CuerpoModal } from '../../general_components/form_components/container';
+import { Label, InputText } from '../../general_components/form_components/controles'; 
 
 //GRID
-import SimpleGridExample from '../../general_components/form_components/grid/ag_grid_render';
+import AgGridRender from '../../general_components/form_components/grid/ag_grid_render';
+import { ColumnApi, GridApi } from "ag-grid";
+import { GridOptions } from "ag-grid";
 
 //Modal
-//import Modal from '../../general_components/form_components/modal/modal';
+import MyModal from '../../general_components/form_components/modal/modal';
 
-
+/*
 interface State {
     codigo: any;
     nombre: any;
@@ -24,25 +27,19 @@ interface State {
     estado: any;
     options_users: Array<any>;
     isShowingModal: any;
+    data_importacion: any[];
+    columnDefs: any[];
 
 }
+*/
 
-export const ContenedorForm = styled.div`    
-    position: absolute;
-    width: 100%;
-    border: 1px solid #cfd8dc;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 20px;    
-    padding-bottom: 10px;
-    @media (max-width: 767px) {	    
-        margin-left: 1%;
-        margin-right: 1%;
-        width: 98%;
-    }
-`;
 
-export class registroClub extends React.Component<{} , State> {
+
+
+export class registroClub extends React.Component<any , any> {
+    columnApi: ColumnApi;
+    api: GridApi;
+    gridOptions: GridOptions;
     constructor() { //Permite pasar valores al componente
         super();
         this.state = {
@@ -55,16 +52,61 @@ export class registroClub extends React.Component<{} , State> {
             estado: "",
             options_users: [],
 
+            //Por cada modal un state para controlar su estado! 
             isShowingModal: false,
+
+            //Grid
+            data: [],
+            columnDefs: [{
+                header: "Forma de pg.",
+                field: "DescripcionPago",
+                width: 120,
+                type: "string"
+            },
+            {
+                header: "Banco",
+                field: "Banco",
+                width: 90,
+                type: "string"
+            },
+            {
+                header: "Cuenta",
+                field: "Cuenta",
+                width: 73,
+                type: "string",
+            },
+            {
+                header: "Doc.",
+                field: "Cheque",
+                width: 40,
+                type: "num_entero",
+            }
+            ],
+
+            gridOptionsX: {
+                context: {
+                    componentParent: this
+                },
+                enableColResize: true
+            }
             
 
         };
+
+        
+
 
         //Funciones binds
         this.changeValues = this.changeValues.bind(this);
         this.ChangeDateCreacion = this.ChangeDateCreacion.bind(this);
         this.ChangeDateVigencia = this.ChangeDateVigencia.bind(this);
-        this.showModal = this.showModal.bind(this);
+
+        //Modals
+        this.showModal = this.showModal.bind(this); //SWITCH OPEN/CLOSE
+        this.onClose = this.onClose.bind(this);     //CLOSE
+
+        //GRID
+        this.onGridReady = this.onGridReady.bind(this);
     }
 
     public render() {
@@ -118,7 +160,7 @@ export class registroClub extends React.Component<{} , State> {
                 <Row>
                     <Container className='col-md-12'>
                         <div className="btn-group pull-right">
-                            <button type="submit" className='btn btn-secondary btn-sm' onChange={this.showModal}>
+                            <button type="submit" className='btn btn-secondary btn-sm' onClick={this.showModal}>
                                 <i className="fa fa-trash-o fa-lg"></i> Limpiar
                             </button>
                         </div>
@@ -131,21 +173,66 @@ export class registroClub extends React.Component<{} , State> {
                 </Row>
                 <Row>
                     <Container className='col-md-12'>
-                        <SimpleGridExample />
-               
+                        <AgGridRender altura={250} rowData={this.state.data} columnDefs={this.state.columnDefs} onGridReady={this.onGridReady} />                                                           
                     </Container>
                 </Row>
             </CuerpoForm>
+
+            <MyModal open={this.state.isShowingModal} onClose={this.onClose}>
+                <HeaderModal>
+                    <TituloForm>Registro Club</TituloForm>
+                </HeaderModal>
+                <CuerpoModal>
+                    <Row>
+                        <Container className='col-md-6' >
+                            <Label>Codigo:</Label>
+                            <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
+                        </Container>
+                        <Container className='col-md-6'>
+                            <Label>Fecha de creacion:</Label>
+                            <DayPicker id="fecha_creacion" selected={this.state.fecha_creacion} onChange={this.ChangeDateCreacion} />
+                        </Container>
+                    </Row>
+
+                    <Row>
+                        <Container className='col-md-12'>
+                            <div className="btn-group pull-right">
+                                <button type="submit" className='btn btn-secondary btn-sm' onClick={this.showModal}>
+                                    <i className="fa fa-times-circle"></i> Cerrar
+                            </button>
+                            </div>
+                            <div className="btn-group pull-right">
+                                <button type="submit" className='btn btn-primary btn-sm'>
+                                    <i className="fa fa-floppy-o fa-lg"></i> Guardar
+                            </button>
+                            </div>
+                        </Container>
+                    </Row>
+                </CuerpoModal>
+            </MyModal>
 
             
 
         </div>;
     }
 
-    //Functions modal
+    //Funciones Grid
+    onGridReady(params) {
+        this.api = params.api;
+        this.columnApi = params.columnApi;
+    }
 
-    showModal() {
+    //Valores aplicados
+    
+
+    //Functions modal
+    //Abrir/cerrar
+    showModal(event) {
         this.setState({ isShowingModal: !this.state.isShowingModal })
+    }
+
+    onClose(event) {
+        this.setState({ isShowingModal: false });
     }
     
 
@@ -188,27 +275,3 @@ export class registroClub extends React.Component<{} , State> {
     }
 
 }//End
-
-    //Style Components
-    const Label = styled.label` //LABEL STYLE
-      display: inline-block;  
-      font-size: 12px;
-    `;
-
-    const InputText = styled.input`
-      height: 25px;
-      padding: 5px 10px;
-      font-size: 11px;
-      line-height: 1.5;
-      border-radius: 3px;
-      display: block;
-      width: 100%;
-      color: #555;
-      background-color: #fff;
-      background-image: none;
-      border: 1px solid #ccc;
-    `;
-
-    const Container = styled.div`
-      margin-bottom: 6px;
-    `;

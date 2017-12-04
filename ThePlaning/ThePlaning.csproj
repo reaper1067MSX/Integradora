@@ -21,15 +21,30 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Files not to show in IDE -->
+    <None Remove="ClientApp\components\general_components\form_components\controles\index.tsx" />
     <None Remove="ClientApp\components\general_components\form_components\date-picker\date-piker.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_edit_numerodecimal.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_edit_numeroentero.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_render_fecha_corta.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_render_link_elim.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_render_numerodecimal.tsx" />
+    <None Remove="ClientApp\components\general_components\form_components\grid\col_render_numeroentero.tsx" />
     <None Remove="ClientApp\components\general_components\form_components\modal\modal.tsx" />
     <None Remove="ClientApp\components\general_components\form_components\selects\select.tsx" />
     <None Remove="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\controles\index.tsx" />
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\date-picker\date-piker.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_edit_numerodecimal.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_edit_numeroentero.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_render_fecha_corta.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_render_link_elim.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_render_numerodecimal.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\general_components\form_components\grid\col_render_numeroentero.tsx" />
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\modal\modal.tsx" />
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\selects\select.tsx" />
+    <TypeScriptCompile Include="ClientApp\Global_functions\formats.tsx" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
