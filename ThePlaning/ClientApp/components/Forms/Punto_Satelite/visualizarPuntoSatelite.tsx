@@ -122,24 +122,25 @@ export class visualizarPuntoSatelite extends React.Component<any, any> {
                         <Container className='col-md-6' >
                             <Label>Codigo:</Label>
                                 <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Codigo' onChange={this.changeValues} />
-                            <Label>Nombre:</Label>
+                                <br />
+                                <Label>Nombre:</Label>
                                 <InputText name='nombre' value={this.state.nombre} type="text" className='form-control input-sm' placeholder='Nombre' onChange={this.changeValues} />
                                 <br />
                             <Label>Tipo:</Label>
                                 <Selects name="tipo" value={this.state.tipo} onChange={(value) => { this.setState({ programa: value }) }} options={this.state.options_users} />
                                 <br />
-                           <Label>Direccion:</Label>
-                                <InputText name='direccion' value={this.state.direccion} type="text" className='form-control input-sm' placeholder='Direccion' onChange={this.changeValues} />
-                                <br />
-                           <Label>Latitud:</Label>
-                                <InputText name='latitud' value={this.state.latitud} type="text" className='form-control input-sm' placeholder='Latitud' onChange={this.changeValues} />
-                                <br />
-                           <Label>Longitud:</Label>
-                                <InputText name='longitud' value={this.state.longitud} type="text" className='form-control input-sm' placeholder='Longitud' onChange={this.changeValues} />
-                                <br />
+                           
                         </Container>
                         <Container className='col-md-6'>
-                            <img src="C:\Users\USUARIO\Desktop\IntegradoraProyecto\Integradora\ThePlaning\ClientApp\components\Forms\Punto_Satelite\mapa.jpg"></img>
+                            <Label>Direccion:</Label>
+                            <InputText name='direccion' value={this.state.direccion} type="text" className='form-control input-sm' placeholder='Direccion' onChange={this.changeValues} />
+                            <br />
+                            <Label>Latitud:</Label>
+                            <InputText name='latitud' value={this.state.latitud} type="text" className='form-control input-sm' placeholder='Latitud' onChange={this.changeValues} />
+                            <br />
+                            <Label>Longitud:</Label>
+                            <InputText name='longitud' value={this.state.longitud} type="text" className='form-control input-sm' placeholder='Longitud' onChange={this.changeValues} />
+                            <br />        
                         </Container>
                     </Row>
                     
@@ -188,10 +189,8 @@ export class visualizarPuntoSatelite extends React.Component<any, any> {
 
     //Realiza todas estas operaciones al renderizar el form
     componentDidMount() {
-        var options = [{ value: 0, label: 'YORK' },
-        { value: 1, label: 'Amadeus' },
-        { value: 2, label: 'Landa' },
-        { value: 3, label: 'FORK' }]
+        var options = [{ value: 0, label: 'Interna' },
+        { value: 1, label: 'Externa' }]
 
         this.setState({ options_users: options })
     }
