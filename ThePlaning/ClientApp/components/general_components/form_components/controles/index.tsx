@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 export const Label = styled.label` //LABEL STYLE
       display: inline-block;  
-      font-size: 12px;
+      font-size: 15px;
     `;
 
 export const InputText = styled.input`

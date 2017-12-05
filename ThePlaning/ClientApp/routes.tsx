@@ -16,16 +16,7 @@ import { visualizarCoFacilitador } from './components/Forms/CoFacilitador/visual
 import { registroBeneficiario } from './components/Forms/Beneficiario/registroBeneficiario';
 import { visualizarBeneficiario } from './components/Forms/Beneficiario/visualizarBeneficiario';
 
-import { registroPrograma } from './components/Forms/Programa/registroPrograma';
-import { visualizarPrograma } from './components/Forms/Programa/visualizarPrograma';
-
-import { registroLocalidad } from './components/Forms/Localidad/registroLocalidad';
-import { visualizarLocalidad } from './components/Forms/Localidad/visualizarLocalidad';
-
-import { registroObjetivoEstrategico } from './components/Forms/Objetivo_Estrategico/registroObjetivoEstrategico';
-import { visualizarObjetivoEstrategico } from './components/Forms/Objetivo_Estrategico/visualizarObjetivoEstrategico';
-
-
+import { visualizarParametros } from './components/Forms/Parametros/visualizarParametros';
 
 
 
@@ -47,12 +38,6 @@ export const routes = <Layout>
     <Route path='/registroBeneficiario' component={registroBeneficiario} />
     <Route path='/visualizarBeneficiario' component={visualizarBeneficiario} />
 
-    <Route path='/registroPrograma' component={registroPrograma} />
-    <Route path='/visualizarPrograma' component={visualizarPrograma} />
+    <Route path='/visualizarParametros' component={visualizarParametros} />
 
-    <Route path='/registroLocalidad' component={registroLocalidad} />
-    <Route path='/visualizarLocalidad' component={visualizarLocalidad} />
-
-    <Route path='/registroObjetivoEstrategico' component={registroObjetivoEstrategico} />
-    <Route path='/visualizarObjetivoEstrategico' component={visualizarObjetivoEstrategico} />
 </Layout>;

@@ -184,6 +184,12 @@ export class registroClub extends React.Component<any , any> {
                 </HeaderModal>
                 <CuerpoModal>
                     <Row>
+                        <Container className='col-md-6' offset-md-6>
+                            <Label>Codigo:</Label>
+                            <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />
+                        </Container>
+                    </Row>
+                    <Row>
                         <Container className='col-md-6' >
                             <Label>Codigo:</Label>
                             <InputText name='codigo' value={this.state.codigo} type="number" className='form-control input-sm' placeholder='Ej: 123' onChange={this.changeValues} />

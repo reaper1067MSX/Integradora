@@ -29,9 +29,6 @@ export class NavBar extends React.Component<{}, {}> {
                                          </NavLink>
                                     </li>                
                                     <li>
-                                        <span className="glyphicon glyphicon-chevron-right"></span>Disponibilidad del Beneficiario
-                                    </li>
-                                    <li>
                                         <span className="glyphicon glyphicon-chevron-right"></span>Asignar Beneficiario a Club
                                     </li>
                                 </ul>
@@ -86,47 +83,17 @@ export class NavBar extends React.Component<{}, {}> {
                                         </NavLink>
                                     </li>
                                 </ul>
-                                {/*--------------Opcion  Programa*----------*/}
+                                {/*--------------Opcion  Parametros*----------*/}
                                 <li data-toggle="collapse" data-target="#new4" className="collapsed">
                                     <a href="#">
                                        <i className='fa fa-book'></i>
-                                        Programa
+                                        Parametros
                                         <span className='glyphicon glyphicon-chevron-down'></span> 
                                      </a>
                                 </li>
                                 <ul className="sub-menu collapse" id="new4">
                                     <li>
-                                        <NavLink to={'/visualizarPrograma'} activeClassName='active'> 
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                        </NavLink>
-                                    </li>
-                                </ul>
-                                {/*--------------Opcion  Objetivo Estrategico*----------*/}
-                                <li data-toggle="collapse" data-target="#new5" className="collapsed">
-                                    <a href="#">
-                                        <i className='fa fa-bullseye'></i> Objetivo Estrategico
-                                        <span className='glyphicon glyphicon-chevron-down'></span>
-                                    </a>
-                                </li>
-                                <ul className="sub-menu collapse" id="new5">
-                                    <li>
-                                        <NavLink to={'/visualizarObjetivoEstrategico'} activeClassName='active'>
-                                            <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
-                                        </NavLink>
-                                    </li>
-                                </ul>
-
-                                {/*--------------Opcion  Localidad*----------*/}
-                                <li data-toggle="collapse" data-target="#new6" className="collapsed">
-                                    <a href="#">
-                                        <i className='fa fa-university'></i>
-                                        Localidad
-                                        <span className='glyphicon glyphicon-chevron-down'></span>
-                                    </a>
-                                </li>
-                                <ul className="sub-menu collapse" id="new6">
-                                    <li>
-                                         <NavLink to={'/visualizarLocalidad'} activeClassName='active'>
+                                        <NavLink to={'/visualizarParametros'} activeClassName='active'> 
                                             <span className="glyphicon glyphicon-chevron-right"></span>Visualizar
                                         </NavLink>
                                     </li>
