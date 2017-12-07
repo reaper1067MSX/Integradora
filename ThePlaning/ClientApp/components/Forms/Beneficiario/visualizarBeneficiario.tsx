@@ -3,7 +3,7 @@ import styled from 'styled-components'; //STYLES
 
 import Selects from '../../general_components/form_components/selects/select';
 import { CuerpoForm, ContainerEdit, Row, HeaderForm, Container, TituloForm, Topbar, HeaderModal, CuerpoModal } from '../../general_components/form_components/container';
-import { Label, InputText } from '../../general_components/form_components/controles';
+import { Label, InputText, TextArea } from '../../general_components/form_components/controles';
 
 import DayPicker from '../../general_components/form_components/date-picker/date-piker';
 import * as moment from 'moment';
@@ -136,89 +136,80 @@ export class visualizarBeneficiario extends React.Component<any,any> {
                         </Container>
                     </Row>
                         <Row>
-                            <Container className='col-md-5' >
+                            <Container className='col-md-7' >
                                 <Label>Nombres:</Label>
                                 <InputText name='nombres' value={this.state.nombres} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
                             </Container>
+                            
                             <Container className='col-md-5' >
-                                <Label>Apellidos:</Label>
-                                <InputText name='apellidos' value={this.state.apellidos} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
-                            </Container>
-                            <Container className='col-md-2' >
                                 <Label>Edad:</Label>
                                 <InputText name='edad' value={this.state.edad} type="string" className='form-control input-sm' placeholder='Edad' onChange={this.changeValues} />
                             </Container>
                         </Row>
                         <Row>
-                        <Container className='col-md-12' >
-                            <div className="btn-group pull-left">
-                                <br/>
-                                <Label>Educacion</Label>
-                            </div>
+                        <Container className='col-md-7' pull-left >                           
+                            <Label>Apellidos:</Label>
+                            <InputText name='apellidos' value={this.state.apellidos} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
                         </Container>
                         </Row>
-                        <Row>
-                            <Container className='col-md-6' >
-                                <Label>Nombre de Escuela:</Label>
-                                <InputText name='escuela' value={this.state.escuela} type="string" className='form-control input-sm' placeholder='Escuela' onChange={this.changeValues} />
-                            </Container>
-                            <Container className='col-md-3' >
-                                <Label>Periodo Escolar:</Label>
-                                <InputText name='periodoEscolar' value={this.state.periodoEscolar} type="string" className='form-control input-sm' placeholder='Año Escolar' onChange={this.changeValues} />
-                            </Container>
-                            <Container className='col-md-3' >
-                                <Label>Calificacion:</Label>
-                                <InputText name='calificacion' value={this.state.calificacion} type="string" className='form-control input-sm' placeholder='Calificacion' onChange={this.changeValues} />
-                            </Container>
-                        </Row>
-                        <Row>
-                            <Container className='col-md-12' >
-                                <div className="btn-group pull-left">
-                                    <br />
-                                    <Label>Representante</Label>
-                                </div>
-                            </Container>
-                        </Row>
-                        <Row>
-                            <Container className='col-md-6' >
+                     {/*Educacion*/}
+                     <Row>
+                        <fieldset className='col-md-12'>
+                            <legend>Educacion</legend>
+                                <Container className='col-md-6' >
+                                    <Label>Nombre de Escuela:</Label>
+                                    <InputText name='escuela' value={this.state.escuela} type="string" className='form-control input-sm' placeholder='Escuela' onChange={this.changeValues} />
+                                </Container>
+                                <Container className='col-md-3' >
+                                    <Label>Periodo Escolar:</Label>
+                                    <InputText name='periodoEscolar' value={this.state.periodoEscolar} type="string" className='form-control input-sm' placeholder='Periodo Escolar' onChange={this.changeValues} />
+                                </Container>
+                                <Container className='col-md-3' >
+                                    <Label>Calificacion:</Label>
+                                    <InputText name='calificacion' value={this.state.calificacion} type="string" className='form-control input-sm' placeholder='Calificacion' onChange={this.changeValues} />
+                                </Container>
+                            </fieldset>
+                     </Row>
+                     <Row>
+                        <fieldset className='col-md-12'>
+                            <legend>Representante</legend>
+                     <Row>
+                        
+                            <Container className='col-md-7' >
                                 <Label>Nombres:</Label>
                                 <InputText name='nombreRe' value={this.state.nombreRe} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
                             </Container>
-                            <Container className='col-md-6' >
-                                <Label>Apellidos:</Label>
-                                <InputText name='apellidoRe' value={this.state.apellidoRe} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
+                            <Container className='col-md-5' >
+                                <Label>Cedula:</Label>
+                                <InputText name='cedula' value={this.state.cedula} type="string" className='form-control input-sm' placeholder='Cedula' onChange={this.changeValues} />
                             </Container>
+                        
                         </Row>
                         <Row>
-                        <Container className='col-md-4' >
-                            <Label>Cedula:</Label>
-                            <InputText name='cedula' value={this.state.cedula} type="string" className='form-control input-sm' placeholder='Cedula' onChange={this.changeValues} />
+                        
+                        <Container className='col-md-7' >
+                            <Label>Apellidos:</Label>
+                            <InputText name='apellidoRe' value={this.state.apellidoRe} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
                         </Container>
-                            <Container className='col-md-4' >
-                                <Label>Nombres:</Label>
-                                <InputText name='nombreRe' value={this.state.nombreRe} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
-                            </Container>
-                            <Container className='col-md-4' >
-                                <Label>Apellidos:</Label>
-                                <InputText name='apellidoRe' value={this.state.apellidoRe} type="string" className='form-control input-sm' placeholder='Apellidos' onChange={this.changeValues} />
-                            </Container>
+                        <Container className='col-md-5' >
+                            <Label>Telefono:</Label>
+                            <InputText name='telefono' value={this.state.telefono} type="string" className='form-control input-sm' placeholder='Telefono' onChange={this.changeValues} />
+                        </Container>
                         </Row>
                         <Row>
-                            <Container className='col-md-9' >
+                        <Container className='col-md-12' pull-left >
                                 <Label>Direccion:</Label>
                                 <InputText name='direccion' value={this.state.direccion} type="string" className='form-control input-sm' placeholder='Direccion' onChange={this.changeValues} />
                             </Container>
-                            <Container className='col-md-3' >
-                                <Label>Telefono:</Label>
-                                <InputText name='telefono' value={this.state.telefono} type="string" className='form-control input-sm' placeholder='Telefono' onChange={this.changeValues} />
-                            </Container>
+                            
                         </Row>
-
+                        </fieldset>
+                    </Row>
                         <Row>
                             <Container className='col-md-12' >
                                 <Label>Observaciones:</Label>
                                 <br />
-                                <textarea name='observaciones' placeholder='Observaciones' />
+                                <TextArea name='observaciones' placeholder='Observaciones' ></TextArea>
                             </Container>
                         </Row>
 
