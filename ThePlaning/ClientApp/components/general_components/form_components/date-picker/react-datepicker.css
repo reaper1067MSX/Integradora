@@ -1,4 +1,4 @@
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow,
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="to@import url('file:///C:\Users\USUARIO\Desktop\Integradora\ThePlaning\ClientApp\components\general_components\form_components\date-picker\react-datepicker.css');p"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow {
   margin-left: -8px;
   position: absolute;
@@ -133,27 +133,26 @@
 
 /*Color de letras del encabezado*/
 .react-datepicker__current-month, .react-datepicker-time__header {
-  margin-top: 0;
-  color: #000;
-  font-weight: bold;
-  font-size: 0.944rem;
+    margin-top: 0;
+    color: #901f61;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .react-datepicker__navigation {
-  line-height: 1.7rem;
-  text-align: center;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  width: 0;
-  border: 0.45rem solid transparent;
-  z-index: 1;
-
+    line-height: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    width: 0;
+    border: 0.45rem solid transparent;
+    z-index: 1;
 }
 
 .react-datepicker__navigation--previous {
   left: 10px;
-  border-right-color: #ccc;
+  border-right-color: #aeaeae;
 }
 
 .react-datepicker__navigation--previous:hover {
@@ -228,10 +227,10 @@
   background: white;
 }
 
-.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+/*.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
   width: 70px;
   overflow-x: hidden;
-}
+}*/
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
   list-style: none;
@@ -374,8 +373,17 @@
 }
 
 .react-datepicker__input-container {
-    position: relative;
-    display: inline-block;
+    height: 25px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
 }
 
 .react-datepicker__year-read-view,
@@ -578,3 +586,4 @@ border:10px;
 .CustomDatePickerInput {
     width: 100%;
 }
+

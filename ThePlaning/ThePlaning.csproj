@@ -46,6 +46,9 @@
     <TypeScriptCompile Include="ClientApp\components\general_components\form_components\selects\select.tsx" />
     <TypeScriptCompile Include="ClientApp\Global_functions\formats.tsx" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientApp\components\general_components\form_components\date-picker\" />
+  </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />

@@ -21,7 +21,7 @@ export const HeaderModal = styled.div`
     border-bottom: 3px solid #344868;
     padding: 0.75rem 1.25rem;
     padding-bottom: 35px;
-    width:100%;
+    width:95%;
 `;
 
 export const CuerpoModal = styled.div`
@@ -30,7 +30,7 @@ export const CuerpoModal = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 1%;
-    width: 100%;
+    width: 95%;
 `;
 
 //=========================================

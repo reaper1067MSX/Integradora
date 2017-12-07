@@ -170,21 +170,21 @@ export class visualizarBeneficiario extends React.Component<any,any> {
                                 </Container>
                             </fieldset>
                      </Row>
+                     {/*Representante*/}
                      <Row>
                         <fieldset className='col-md-12'>
                             <legend>Representante</legend>
-                     <Row>
+                         <Row>
+                                <Container className='col-md-7' >
+                                    <Label>Nombres:</Label>
+                                    <InputText name='nombreRe' value={this.state.nombreRe} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
+                                </Container>
+                                <Container className='col-md-5' >
+                                    <Label>Cedula:</Label>
+                                    <InputText name='cedula' value={this.state.cedula} type="string" className='form-control input-sm' placeholder='Cedula' onChange={this.changeValues} />
+                                </Container>
                         
-                            <Container className='col-md-7' >
-                                <Label>Nombres:</Label>
-                                <InputText name='nombreRe' value={this.state.nombreRe} type="string" className='form-control input-sm' placeholder='Nombres' onChange={this.changeValues} />
-                            </Container>
-                            <Container className='col-md-5' >
-                                <Label>Cedula:</Label>
-                                <InputText name='cedula' value={this.state.cedula} type="string" className='form-control input-sm' placeholder='Cedula' onChange={this.changeValues} />
-                            </Container>
-                        
-                        </Row>
+                            </Row>
                         <Row>
                         
                         <Container className='col-md-7' >
@@ -205,13 +205,6 @@ export class visualizarBeneficiario extends React.Component<any,any> {
                         </Row>
                         </fieldset>
                     </Row>
-                        <Row>
-                            <Container className='col-md-12' >
-                                <Label>Observaciones:</Label>
-                                <br />
-                                <TextArea name='observaciones' placeholder='Observaciones' ></TextArea>
-                            </Container>
-                        </Row>
 
                     <Row>
                         <Container className='col-md-12'>
